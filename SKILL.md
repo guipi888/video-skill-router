@@ -2,8 +2,8 @@
 name: video-skill-router
 slug: video-skill-router
 displayName: 视频创作技能路由器
-version: 2.0.0
-description: 视频创作技能路由器（Video Creation Skill Router）——面向视频/动画创作者的能力发现与编排层（元技能）。用户提出任何视频制作需求时自动完成：① 判定视频类别（商业宣传/知识科普/其他）并优先匹配本地已装技能；② 本地无命中则按类别走对应渠道（内置精选目录→GitHub 实时搜索→网络搜索）发现技能并自动下载安装；③ 编排执行所装技能，输出剪辑后的视频文件；④ 生成后向用户说明所装技能的作用，并询问保留还是卸载。安装/卸载全程走安全协议（快照+校验+可回滚，禁 rm -rf）。触发词：做视频、视频创作、找动画技能、下载技能、视频技能路由器、video skill、animation skill、ai video skill。
+version: 2.0.1
+description: 想做视频却不知道用什么工具？想让 AI 帮你「找技能 → 装技能 → 做视频 → 一条龙」？视频创作技能路由器（Video Creation Skill Router）是一个 AI video skill / animation skill 元技能——视频创作能力的发现与编排层，自身不生产视频，只做匹配、下载、编排执行、善后询问。你只管说需求（"把勾股定理做成讲解动画""给我的 APP 做个宣传片""剪掉这段口播的口误"），它自动完成：① 判定视频类别（商业宣传/知识科普/其他）并优先匹配本地已装技能；② 本地无命中则按类别走对应渠道（内置精选目录→GitHub 实时搜索→网络搜索）发现并下载安装；③ 编排执行所装技能，输出剪辑后的视频文件；④ 生成后说明所装技能的作用，问你要保留还是卸载。安装/卸载全程走安全协议（快照+校验+可回滚，禁 rm -rf）。覆盖 explainer video 知识讲解、product demo 商业宣传、talking-head 口播剪辑、motion graphics 动效、Manim 数学动画、Remotion 程序化视频。Use when 用户说「做视频」「找动画技能」「下载视频技能」「帮我剪辑口播」「video skill」「animation skill」「ai video skill」「how do I make a video with AI」「is there a skill for video editing」时触发。解决"想创作视频却不知道选什么工具、装了技能不敢卸"的问题。
 author: guipi888
 license: MIT
 triggers:
@@ -15,7 +15,7 @@ triggers:
 - 下载技能
 - 视频技能路由器
 trigger: ["做视频", "视频创作", "视频制作", "动画技能", "找技能", "下载技能", "视频技能路由器"]
-category: 效率工具
+category: ["效率工具"]
 tags: ["视频创作", "AI技能", "动画", "视频剪辑", "技能路由器", "效率工具"]
 ---
 
