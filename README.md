@@ -1,6 +1,6 @@
-# 视频创作技能路由器 · WorkBuddy Skill
+# 视频创作技能路由器 · Video Creation Skill Router
 
-想做视频却不知道用什么工具？想让 AI 帮你「找技能 → 装技能 → 做视频 → 一条龙」？视频创作技能路由器是视频/动画创作的能力发现与编排层（元技能）——你只管说需求（"把勾股定理做成讲解动画""给我的 APP 做个宣传片""剪掉这段口播的口误"），它自动完成：判定视频类别（商业宣传/知识科普/其他）→ 优先匹配本地已装技能 → 本地没有就按类别走对应渠道发现并下载安装（内置精选目录 → GitHub 实时搜索 → 网络搜索）→ 编排执行所装技能，输出剪辑后的视频文件 → 最后告诉你装了什么技能、有什么用，问你要保留还是卸载。
+想做视频却不知道用什么工具？想让 AI 帮你「找技能 → 装技能 → 做视频 → 一条龙」？视频创作技能路由器（Video Creation Skill Router）是一个 AI video skill / animation skill 元技能——视频/动画创作的能力发现与编排层——你只管说需求（"把勾股定理做成讲解动画""给我的 APP 做个宣传片""剪掉这段口播的口误"），它自动完成：判定视频类别（商业宣传/知识科普/其他）→ 优先匹配本地已装技能 → 本地没有就按类别走对应渠道发现并下载安装（内置精选目录 → GitHub 实时搜索 → 网络搜索）→ 编排执行所装技能，输出剪辑后的视频文件 → 最后告诉你装了什么技能、有什么用，问你要保留还是卸载。
 
 安装/卸载全程走安全协议：git 快照可回滚、frontmatter 强校验、多技能包需明确选择、禁 rm -rf。适合：自媒体视频创作者、知识科普 UP 主、电商带货团队、想用 AI 做视频但零技能起步的普通用户。Video creation skill router for animation & video makers.
 
@@ -10,6 +10,20 @@
 - **本地没有相关能力**：按类别走不同渠道——商业宣传类淘动效/模板/广告技能，知识科普类淘数学动画/数据可视化，其他类淘剪辑/字幕/配音，GitHub + 网络双通道兜底
 - **装了技能不会编排**：下载完成后自动通读并调用所装技能，按其工作流执行，缺环用 FFmpeg 补齐，直接产出成片
 - **技能越装越乱**：每次生成后输出安装清单（技能/作用/来源），一键卸载走 git rm 或回收站机制，可回滚、零残留
+
+Unlike single-engine skills (Manim-only or Remotion-only), this router covers the full pipeline: category detection → discovery → install → orchestration → output.
+
+## Use Cases 适用场景
+
+| 场景 | 示例需求 | 走哪条渠道 |
+|------|----------|-----------|
+| 数学/科学讲解动画（math explainer video） | 「把勾股定理的证明做成讲解动画」 | 知识科普类 → manim_skill 等 |
+| 产品演示/宣传片（product demo & promo video） | 「给我的 APP 做个产品演示宣传视频」 | 商业宣传类 → motion-design 模板技能 |
+| 口播剪辑（talking-head editing） | 「剪掉这段口播的口误和静音」 | 其他类 → herk-edit-kit 等 |
+| 数据可视化视频（data visualization video） | 「把这份销售数据做成动态图表视频」 | 知识科普类 → 数据动画技能 |
+| 字幕/白板动画（subtitle & whiteboard animation） | 「把 SRT 字幕做成白板手绘动画」 | 其他类 → 字幕动画技能 |
+| 电商带货视频（e-commerce video） | 「给这款商品做个带货短视频」 | 商业宣传类 → 广告模板技能 |
+| Lottie 网页动效（lottie web animation） | 「网页加载 lottie 动画」 | 商业宣传类 → motion-design-skill |
 
 ## 安装
 
