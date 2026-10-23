@@ -1,5 +1,7 @@
 # 视频创作技能路由器 · Video Creation Skill Router
 
+[English](./README.en.md) · **在线文档：** https://guipi888.github.io/video-skill-router/
+
 想做视频却不知道用什么工具？想让 AI 帮你「找技能 → 装技能 → 做视频 → 一条龙」？视频创作技能路由器（Video Creation Skill Router）是一个 AI video skill / animation skill 元技能——视频/动画创作的能力发现与编排层——你只管说需求（"把勾股定理做成讲解动画""给我的 APP 做个宣传片""剪掉这段口播的口误"），它自动完成：判定视频类别（商业宣传/知识科普/其他）→ 优先匹配本地已装技能 → 本地没有就按类别走对应渠道发现并下载安装（内置精选目录 → GitHub 实时搜索 → 网络搜索）→ 编排执行所装技能，输出剪辑后的视频文件 → 最后告诉你装了什么技能、有什么用，问你要保留还是卸载。
 
 安装/卸载全程走安全协议：git 快照可回滚、frontmatter 强校验、多技能包需明确选择、禁 rm -rf。适合：自媒体视频创作者、知识科普 UP 主、电商带货团队、想用 AI 做视频但零技能起步的普通用户。Video creation skill router for animation & video makers.
@@ -89,6 +91,10 @@ scripts/
   match_skill.py                  # 需求→技能匹配打分（本地+目录）
   search_anim.py                  # 多渠道动画技能搜索（GitHub API）
   manage_skill.py                 # 安装/清单/卸载管理（快照+校验+回滚）
+docs/
+  index.html                      # 落地页（GitHub Pages: guipi888.github.io/video-skill-router）
+  social-preview.html             # 社交预览图源文件（1280×640）
+  images/social-preview.png       # 社交预览图（Settings → Social preview 上传用，仓库内留存真值）
 ```
 
 ## 关于作者
